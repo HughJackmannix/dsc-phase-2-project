@@ -79,7 +79,7 @@ R² = 0.698
 
 ![img](./images/baseline_qq)
 
-Extreme residual values show that there are still many significant outliers within the data 
+Extreme residual values show that there are still many significant outliers that are severely skewing the data 
 
 
 ### Final Model 
@@ -116,6 +116,8 @@ The final model was achieved after four optimized iterations of the baseline mod
 
 ![img](./images/final_qq)
 
+Residuals look much more normal than the baseline model, however conservative outlier filtering has allowed many to remain, still skewing the data. The model is better at predicting the test data over the training data by a small margin 
+
 **Model Discussion**
 
 <p>After four iterations, my model contains 40 features. With many features, my attention falls upon the Adjusted R² = 0.729, rather than the R² = 0.730 (small as the difference may be). With a minimum threshold of R² = 0.6, a model that attributes 72.9% of the change in property price to the 40 examined features. Of these features, all have a p-value below 0.05 (the largest being Kent = 0.011), indicating there is a less than 5% for each feature's coefficent being due to randomness. While the summary does not display the actual Prob(F-statistic) (due to its very small value), we know that it is less than 1%. This statistic gives weight to the validity of the model, as it implies that some of the parameters are nonzero values (rejecting the null hpyothesis, that all parameters are 0).</p>
@@ -143,7 +145,7 @@ With the insight the model has given regarding the relationship between price an
 - Conduct further analysis regarding the relationship between bedrooms and property price 
 - Research age demographics by city / other geographical data
     - Young professionals tend to move to areas with a population with a similar age
-- Explore how log transformations affect the performance of the model 
+- Explore how log transformations affect the performance of the model, and improve residuals 
 
 
 
