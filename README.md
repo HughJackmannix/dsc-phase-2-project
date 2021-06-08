@@ -147,6 +147,11 @@ With the insight the model has given regarding the relationship between price an
     - Young professionals tend to move to areas with a population with a similar age
 - Explore how log transformations affect the performance of the model, and improve residuals 
 
+---------------------------------------------------------------
+
+# Further Information
+
+For further information regarding the analysis, please view the [Jupyter Notebook](final_notebook.ipynb) or review the findings presentation [HERE](phase_2_presentation.pdf) 
 
 
 
