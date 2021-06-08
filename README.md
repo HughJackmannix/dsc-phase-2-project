@@ -41,7 +41,7 @@ This model was built from 20,647 King County properties
 ## EDA
 
 - Determined most / least expensive cities 
-    -40% of properties are located in Seattle 
+    - 40% of properties are located in Seattle 
 
 ![img](./images/cities.png) 
 
@@ -66,8 +66,8 @@ Steps taken to create baseline:
     - rel_living - difference between sqft_living and sqft_living15
 
 R² = 0.698
-Train RMSE: 197875.38
-Test RMSE: 211117.17
+<p> Train RMSE: 197875.38</p>
+<p>Test RMSE: 211117.17</p>
 
 **Interpretation**
 - All feature p-values are well below 0.05
@@ -106,23 +106,24 @@ The final model was achieved after four optimized iterations of the baseline mod
     - condition
     - ENUMCLAW
     - sqft_lot15
-
-**Model Discussion**
-
-After four iterations, my model contains 40 features. With many features, my attention falls upon the Adjusted R² = 0.729, rather than the R² = 0.730 (small as the difference may be). With a minimum threshold of R² = 0.6, a model that attributes 72.9% of the change in property price to the 40 examined features. Of these features, all have a p-value below 0.05 (the largest being Kent = 0.011), indicating there is a less than 5% for each feature's coefficent being due to randomness. While the summary does not display the actual Prob(F-statistic) (due to its very small value), we know that it is less than 1%. This statistic gives weight to the validity of the model, as it implies that some of the parameters are nonzero values (rejecting the null hpyothesis, that all parameters are 0).
-
-An important parameter to note is the coefficient of bedrooms (-$11,990). While one would expect the price of a property to increase as the number of bedrooms increases, this is not the case according to this data. While there is a chance this may be a novel phenomenon to properties in King County, it is significant grounds to further examination with more data.
-
-Another interesting parameter with a negative coefficient is yr_built (-$2,053.08). This informs us that for every year closer to the present date that a house was built (2015 for this data), the price drops $2,053.08. This is not as confounding as bedrooms having a negative coefficient, as it is very possible that older houses are worth more due to a variety of reasons (historical significance, style of architecture, etc.).
-
-
-
-SUMMARY 
+    - grade_5
+    - grade_6
+    
+<p>Adjusted R² = 0.729 </p>
+<p>R² = 0.730 </p> 
+<p>Train MSE: 127489.30825362197</p> 
+<p>Test MSE: 126359.06534600414</p>
 
 ![img](./images/final_qq)
 
-Train MSE: 127489.30825362197 
-Test MSE: 126359.06534600414 
+**Model Discussion**
+
+<p>After four iterations, my model contains 40 features. With many features, my attention falls upon the Adjusted R² = 0.729, rather than the R² = 0.730 (small as the difference may be). With a minimum threshold of R² = 0.6, a model that attributes 72.9% of the change in property price to the 40 examined features. Of these features, all have a p-value below 0.05 (the largest being Kent = 0.011), indicating there is a less than 5% for each feature's coefficent being due to randomness. While the summary does not display the actual Prob(F-statistic) (due to its very small value), we know that it is less than 1%. This statistic gives weight to the validity of the model, as it implies that some of the parameters are nonzero values (rejecting the null hpyothesis, that all parameters are 0).</p>
+
+<p>An important parameter to note is the coefficient of bedrooms (-$11,990). While one would expect the price of a property to increase as the number of bedrooms increases, this is not the case according to this data. While there is a chance this may be a novel phenomenon to properties in King County, it is significant grounds to further examination with more data.</p>
+
+<p>Another interesting parameter with a negative coefficient is yr_built (-$2,053.08). This informs us that for every year closer to the present date that a house was built (2015 for this data), the price drops $2,053.08. This is not as confounding as bedrooms having a negative coefficient, as it is very possible that older houses are worth more due to a variety of reasons (historical significance, style of architecture, etc.).</p>
+ 
 
 ---------------------------------------------------------------
 
