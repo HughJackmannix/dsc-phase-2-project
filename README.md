@@ -14,7 +14,7 @@ King Property Services (KPS)  wants to acquire new properties that will appeal t
 ## Data and Methods 
 
 This model was built from 20,647 King County properties  
-- Data regarding cities corresponding to zipcodes taken from King County Open Data Source (LINK)
+- Data regarding cities corresponding to zipcodes taken from [King County Open Data Source](https://gis-kingcounty.opendata.arcgis.com/datasets/kingcounty::all-zipcodes-and-po-box-as-centroids-for-king-county-zipcode-all-point/about)
 - Model = OLS Regression 
 
 **Assumptions**
